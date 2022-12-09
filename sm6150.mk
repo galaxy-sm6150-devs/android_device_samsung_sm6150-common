@@ -234,6 +234,9 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+PRODUCT_PACKAGE_OVERLAYS += \
+    $(COMMON_PATH)/overlay \
+
 # Performance
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
