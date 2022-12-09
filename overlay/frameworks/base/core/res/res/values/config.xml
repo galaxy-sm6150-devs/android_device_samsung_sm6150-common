@@ -890,6 +890,12 @@
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
 
+    <!-- If device has a sensor that can wake-up the lock screen -->
+    <bool name="config_dozeWakeLockScreenSensorAvailable">true</bool>
+
+    <!-- If device supports pickup/lift gesture -->
+    <bool name="config_dozePulsePickup">true</bool>
+
     <!-- Maximum color temperature, in Kelvin, supported by Night display. -->
     <integer name="config_nightDisplayColorTemperatureMax">8192</integer>
 
