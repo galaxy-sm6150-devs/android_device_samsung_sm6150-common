@@ -72,6 +72,31 @@
     <!-- Indicates that p2p MAC randomization is supported on this device -->
     <bool name="config_wifi_p2p_mac_randomization_supported">false</bool>
 
+    <!-- Wifi Hal supports force client disconnect for softap -->
+    <bool name="config_wifiSofapClientForceDisconnectSupported">false</bool>
+
+    <!-- boolean indicating whether or not to reset channel configuration during cloud configuration restore -->
+    <bool name="config_wifiSoftapResetChannelConfig">false</bool>
+
+    <!-- boolean indicating whether or not to reset hiddenSsid configuration during cloud configuration restore -->
+    <bool name="config_wifiSoftapResetHiddenConfig">false</bool>
+
+    <!-- boolean indicating whether or not to reset max client setting configuration during cloud configuration restore -->
+    <bool name="config_wifiSoftapResetMaxClientSettingConfig">false</bool>
+
+    <!-- Integer indicating maximum hardware supported client number of soft ap -->
+    <integer name="config_wifiHardwareSoftapMaxClientCount">10</integer>
+
+    <!-- List of allowed channels in 2GHz band for softap. If the device doesn't want to restrict
+         channels this should be empty. Values is a comma separated channel string and/or channel
+         range string like '1-6,11'. -->
+    <string name="config_wifiSoftap2gChannelList">1-11</string>
+
+    <!-- List of allowed channels in 5GHz band for softap. If the device doesn't want to restrict
+         channels this should be empty. Values is a comma separated channel string and/or channel
+         range string like '36-48,149'. -->
+    <string name="config_wifiSoftap5gChannelList">149</string>
+
     <!--
     Controls the mapping between RSSI and RSSI levels.
 
