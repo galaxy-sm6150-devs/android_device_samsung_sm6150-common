@@ -522,6 +522,9 @@ PRODUCT_COPY_FILES += \
 # QMI
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
+PRODUCT_PACKAGES += \
+    libjson \
+
 # QTI
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
