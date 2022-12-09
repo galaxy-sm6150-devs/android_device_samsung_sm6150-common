@@ -43,18 +43,46 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.common-util \
+    android.hardware.audio.common-util.vendor \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
+
+PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.default \
+    audio.primary.sm6150:32 \
     audio.r_submix.default \
     audio.usb.default \
     cplay \
+    libaudioconfigstore \
+    libaudiofoundation \
     libaudioroute \
     libaudioutils \
     libtinyalsa \
+    libtinycompress \
     tinycap \
     tinymix \
     tinypcminfo \
     tinyplay \
+
+# Audio SoundFX
+PRODUCT_PACKAGES += \
+    libaudiopreprocessing \
+    libbundlewrapper \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libldnhncr \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libreverbwrapper \
+    libvisualizer \
+    libvolumelistener:32 \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
