@@ -70,5 +70,12 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml \
 
+# GNSS/GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0 \
+    android.hardware.gnss@1.1 \
+    android.hardware.gnss@2.0 \
+    android.hardware.gnss@2.1 \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6150-common/sm6150-common-vendor.mk)
