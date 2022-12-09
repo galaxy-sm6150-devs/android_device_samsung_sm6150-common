@@ -1,0 +1,11 @@
+# Data
+type vendor_audiopcm_data_file, data_file_type, file_type;
+type biometrics_vendor_data_file, data_file_type, file_type;
+type vendor_convergence_data_file, data_file_type, file_type;
+type vendor_gps_file, data_file_type, file_type;
+
+# EFS
+type prov_efs_file, file_type;
+
+# Files
+type sec_poc_file, file_type;

@@ -1,0 +1,45 @@
+# Bootdevices
+/dev/block/platform/soc/1d84000\.ufshc/by-name/bota          					  u:object_r:botablk_device:s0
+/dev/block/platform/.+/by-name/(cache|CACHE)?							  u:object_r:cache_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/cache         					  u:object_r:cache_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/config        					  u:object_r:frp_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/debug         					  u:object_r:debug_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/dsp           					  u:object_r:dsp_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/efs           					  u:object_r:efsblk_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/fsc           					  u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/fsg           					  u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/hidden        					  u:object_r:hiddenblk_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/modemst1      					  u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/modemst2      					  u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/omr           					  u:object_r:omr_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/param         					  u:object_r:paramblk_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/persistent    					  u:object_r:frp_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/sec_efs       					  u:object_r:sec_efsblk_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/ssd           					  u:object_r:ssdblk_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/steady        					  u:object_r:steady_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/userdata      					  u:object_r:userdata_block_device:s0
+
+# Data
+/data/vendor/biometrics(/.*)?        	                                                          u:object_r:biometrics_vendor_data_file:s0
+/data/vendor/conn(/.*)?                                                                           u:object_r:vendor_convergence_data_file:s0
+/data/vendor/gps(/.*)?                                                                            u:object_r:vendor_gps_file:s0
+/data/vendor/log/audiopcm(/.*)?                                                                   u:object_r:vendor_audiopcm_data_file:s0
+/data/vendor/secradio(/.*)?                                                                       u:object_r:vendor_radio_data_file:s0
+
+# Devices
+/dev/android_rndis_qc          									  u:object_r:radio_device:s0
+/dev/cdma_.*                   								          u:object_r:radio_device:s0
+/dev/dbmdx-[0-9]+              									  u:object_r:audio_device:s0
+/dev/dun                                                                                          u:object_r:dun_device:s0
+/dev/esfp[0-9]+                									  u:object_r:fp_sensor_device:s0
+/dev/gsm_.*                    									  u:object_r:radio_device:s0
+/dev/link_pm                   								          u:object_r:radio_device:s0
+/dev/mdm                       									  u:object_r:radio_device:s0
+/dev/network_latency           								          u:object_r:radio_device:s0
+/dev/network_throughput        									  u:object_r:radio_device:s0
+/dev/nmea                                                                                         u:object_r:radio_device:s0
+/dev/qmi[0-9]*                                                                                    u:object_r:radio_device:s0
+/dev/tzic                                                                                         u:object_r:tz_device:s0
+
+# HALs
+/(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@4\.0-service\.samsung                 u:object_r:hal_keymaster_default_exec:s0
