@@ -43,3 +43,14 @@
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@4\.0-service\.samsung                 u:object_r:hal_keymaster_default_exec:s0
+
+# Rootfs
+/avb(/.*)?        u:object_r:system_file:s0
+/carrier(/.*)?    u:object_r:carrier_file:s0
+/dqmdbg(/.*)?     u:object_r:dqmdbgblk_file:s0
+/keydata(/.*)?    u:object_r:keydata_data_file:s0
+/keyrefuge(/.*)?  u:object_r:keyrefuge_data_file:s0
+/omr(/.*)?        u:object_r:omr_file:s0
+/optics(/.*)?     u:object_r:vendor_file:s0
+/prism(/.*)?      u:object_r:system_file:s0
+/spu(/.*)?        u:object_r:spu_file:s0
