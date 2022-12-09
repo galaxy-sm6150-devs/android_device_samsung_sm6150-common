@@ -70,6 +70,14 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml \
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.gatekeeper=mdfpp \
+
 # GNSS/GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0 \
@@ -93,6 +101,27 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.5 \
     vendor.display.config@2.0 \
     vendor.display.postproc@1.0 \
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service \
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung \
+    libskeymaster4device.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libkeymaster4_1support.vendor:64 \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=mdfpp \
+    ro.security.keystore.keytype=sakv2,gak \
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6150-common/sm6150-common-vendor.mk)

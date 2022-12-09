@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+BOARD_VENDOR := samsung
+
 COMMON_PATH := device/samsung/sm6150-common
 
 # 64 Bit
@@ -136,6 +138,9 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/samsung/sm6150
+
+# Keymaster
+TARGET_KEYMASTER_VARIANT := samsung
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
