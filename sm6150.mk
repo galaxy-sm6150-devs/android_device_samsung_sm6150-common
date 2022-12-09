@@ -177,6 +177,10 @@ PRODUCT_PACKAGES += \
 # Data
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
+# SamsungDAP
+PRODUCT_PACKAGES += \
+    SamsungDAP \
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
