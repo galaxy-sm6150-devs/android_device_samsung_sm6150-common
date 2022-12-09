@@ -1,0 +1,16 @@
+# Netflix
+ro.netflix.bsp_rev=Q6150-17263-1
+
+# RIL
+persist.sys.softsim.netmode=4g
+persist.sys.softsim.status=default,default
+persist.sys.softsim.type=default
+
+# Thermal
+persist.vendor.cp.qc4.min_delta_decidegc=-80
+persist.vendor.cp.qc4.max_delta_decidegc=0
+persist.vendor.cp.qc3_min_delta_decidegc=-80
+persist.vendor.cp.qc3_max_delta_decidegc=0
+persist.vendor.cp.wireless_min_delta_decidegc=-80
+persist.vendor.cp.wireless_max_delta_decidegc=0
+persist.vendor.pps.ramp_step_size=20
