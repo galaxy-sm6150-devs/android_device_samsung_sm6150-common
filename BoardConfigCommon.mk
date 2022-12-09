@@ -16,6 +16,8 @@
 
 BOARD_VENDOR := samsung
 
+BUILD_BROKEN_DUP_RULES := true
+
 COMMON_PATH := device/samsung/sm6150-common
 
 # 64 Bit
