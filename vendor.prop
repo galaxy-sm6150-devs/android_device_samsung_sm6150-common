@@ -179,6 +179,9 @@ sys.config.hardcoder.enable=false
 sys.config.ibs.enable=false
 tas.smartamp.disable=false
 
+# QC Value Addons
+ro.vendor.qti.va_aosp.support=1
+
 # RIL
 keyguard.no_require_sim=true
 persist.radio.multisim.config=dsds

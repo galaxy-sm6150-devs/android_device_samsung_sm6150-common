@@ -1,6 +1,9 @@
 # Netflix
 ro.netflix.bsp_rev=Q6150-17263-1
 
+# QC Value Addons
+ro.vendor.qti.va_aosp.support=1
+
 # RIL
 persist.sys.softsim.netmode=4g
 persist.sys.softsim.status=default,default
