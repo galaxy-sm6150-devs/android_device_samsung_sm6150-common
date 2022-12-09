@@ -174,6 +174,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsuspend \
 
+# Data
+$(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
