@@ -657,6 +657,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     textclassifier.bundle1 \
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti \
+
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay \
