@@ -33,8 +33,14 @@ vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 system_ext/etc/permissions/audiosphere.xml
 -system_ext/framework/audiosphere.jar
 vendor/bin/audioflacapp
+vendor/lib/hw/audio.primary.sm6150.so
 vendor/lib/hw/audio.sec_primary.default.so
 vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
+vendor/lib/lib_SamsungRec_07002.so
+vendor/lib/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib/lib_SoundAlive_SRC384_ver320.so
+vendor/lib/lib_SoundAlive_play_plus_ver400.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
@@ -47,7 +53,9 @@ vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libdrc.so
+vendor/lib/libprofileparamstorage.so
 vendor/lib/libqtigef.so
+vendor/lib/librecordalive.so
 vendor/lib/libsamsungVoipResampler.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
@@ -56,6 +64,10 @@ vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib/vendor.samsung.hardware.audio@1.0.so
 vendor/lib64/hw/audio.sec_primary.default.so
 vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
+vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib64/lib_SoundAlive_play_plus_ver400.so
+vendor/lib64/lib_SoundBooster_ver1000.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
@@ -64,9 +76,11 @@ vendor/lib64/libaudcal.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
+vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libsecaudiocoreutils.so
 vendor/lib64/libsecaudioinfo.so
+vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 
 # Audio SoundFX
 vendor/lib/soundfx/libasphere.so
@@ -150,7 +164,6 @@ vendor/lib/libHpr_RecGAE_cvFeature_v1.0.camera.samsung.so
 vendor/lib/libLocalTM_capture_core.camera.samsung.so
 vendor/lib/libLocalTM_wrapper.camera.samsung.so
 vendor/lib/libOpenCv.camera.samsung.so
-vendor/lib/libc++_shared.so
 vendor/lib/libcamera_nn_stub.so
 vendor/lib/libcamxfdalgov7.so
 vendor/lib/libcamxfdalgov8.so
@@ -173,7 +186,6 @@ vendor/lib/liblivefocus_preview_interface.so
 vendor/lib/libllhdr_interface.so
 vendor/lib/liblow_light_hdr.so
 vendor/lib/libmpbase.so
-vendor/lib/libpvr.so
 vendor/lib/libqcwrappercommon.so
 vendor/lib/libsaiv_BeautySolutionVideo.so
 vendor/lib/libsmartfocus_interface.so
@@ -215,7 +227,6 @@ vendor/lib64/libLocalTM_preview_core.so
 vendor/lib64/libLocalTM_wrapper.camera.samsung.so
 vendor/lib64/libOpenCv.camera.samsung.so
 vendor/lib64/libSNPE.so
-vendor/lib64/libc++_shared.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamxfdalgov7.so
 vendor/lib64/libcamxfdalgov8.so
@@ -229,7 +240,6 @@ vendor/lib64/libdualcam_optical_zoom.so
 vendor/lib64/libdualcam_optical_zoom_control.so
 vendor/lib64/libdualcam_refocus_image.so
 vendor/lib64/libdualcapture.so
-vendor/lib64/libhal.wsm.samsung.so
 vendor/lib64/libhigh_dynamic_range.so
 vendor/lib64/libhigh_dynamic_range_bokeh.so
 vendor/lib64/libjnihelper.so
@@ -240,7 +250,6 @@ vendor/lib64/liblivefocus_preview_engine.so
 vendor/lib64/liblivefocus_preview_interface.so
 vendor/lib64/liblow_light_hdr.so
 vendor/lib64/libmpbase.so
-vendor/lib64/libpvr.so
 vendor/lib64/libqcwrappercommon.so
 vendor/lib64/libremosaic_daemon.so
 vendor/lib64/libremosaiclib.so
@@ -766,27 +775,6 @@ vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.1.so
-
-# Samsung Process Authenticator
-vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
-vendor/etc/init/pa_daemon_qsee.rc
-vendor/lib/libpa.so
-vendor/lib/libpadm.so
-vendor/lib/vendor.samsung.hardware.security.proca@2.0.so
-vendor/lib64/libpa.so
-vendor/lib64/libpadm.so
-vendor/lib64/vendor.samsung.hardware.security.proca@2.0.so
-
-# Samsung VaultKeeper
-vendor/bin/vendor.samsung.hardware.security.vaultkeeper@2.0-service
-vendor/etc/init/vaultkeeper_common.rc
-vendor/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so
-
-# Samsung WSM
-vendor/bin/vendor.samsung.hardware.security.wsm@1.0-service
-vendor/etc/init/wsm-service.rc
-vendor/lib64/libhal.wsm.samsung.so
-vendor/lib64/libwsmd_functions.so
 
 # SCVE
 vendor/lib/libscveCommon.so
