@@ -86,6 +86,10 @@ BOARD_USES_DPM := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
+# FM
+BOARD_HAVE_QCOM_FM := true
+BOARD_HAS_QCA_FM_SOC := "cherokee"
+
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2022-06-01
 
