@@ -133,5 +133,11 @@ AB_OTA_UPDATER := false
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.5 \
+    android.hardware.radio.config@1.2 \
+    libxml2 \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6150-common/sm6150-common-vendor.mk)

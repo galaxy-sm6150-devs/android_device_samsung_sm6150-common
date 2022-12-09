@@ -3,3 +3,7 @@
 # Keymaster
 -vendor/lib64/libkeymaster_helper.so
 -vendor/lib64/libskeymaster4device.so
+
+# Radio
+-vendor/lib/libril.so
+-vendor/lib64/libril.so
