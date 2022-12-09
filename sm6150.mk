@@ -19,6 +19,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 COMMON_PATH := device/samsung/sm6150-common
 
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files \
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
