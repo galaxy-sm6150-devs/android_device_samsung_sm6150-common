@@ -71,6 +71,9 @@ TARGET_NO_RPC := true
 USE_CAMERA_STUB := false
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Charger
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2022-06-01
 
