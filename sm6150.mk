@@ -154,6 +154,13 @@ PRODUCT_PACKAGES += \
     camera.device@3.3-impl \
     camera.device@3.4-impl \
     camera.device@3.5-impl \
+    libcamera2ndk_vendor \
+    libdng_sdk \
+    libdng_sdk.vendor \
+    libgui_vendor:32 \
+    libgrallocusage.vendor \
+    libstdc++ \
+    libstdc++.vendor \
 
 # Charger
 PRODUCT_PACKAGES += \
