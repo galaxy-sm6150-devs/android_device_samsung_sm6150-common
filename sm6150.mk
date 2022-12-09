@@ -298,6 +298,13 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor \
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    libipanat \
+    liboffloadhal \
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
