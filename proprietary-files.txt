@@ -999,4 +999,3 @@ vendor/bin/cnss-daemon
 vendor/firmware/wlan/qca_cld/bdwlan.bin
 vendor/firmware/wlan/qca_cld/grippower.info
 vendor/firmware/wlan/qca_cld/regdb.bin
-vendor/firmware/wlanmdsp.mbn
