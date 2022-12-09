@@ -34,5 +34,9 @@ PRODUCT_PACKAGES += \
     tinypcminfo \
     tinyplay \
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0 \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6150-common/sm6150-common-vendor.mk)
