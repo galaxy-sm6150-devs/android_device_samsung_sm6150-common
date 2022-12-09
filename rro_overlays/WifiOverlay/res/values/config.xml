@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2019 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds.  Do not translate.
+
+     NOTE: The naming convention is "config_camelCaseValue". Some legacy
+     entries do not follow the convention, but all new entries should. -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Set to true if the wifi display supports compositing content stored
+         in gralloc protected buffers.  For this to be true, there must exist
+         a protected hardware path for surface flinger to composite and send
+         protected buffers to the wifi display video encoder.
+
+         If this flag is false, we advise applications not to use protected
+         buffers (if possible) when presenting content to a wifi display because
+         the content may be blanked.
+
+         This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
+         flag is set for wifi displays.
+    -->
+    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
+    
+    <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
+         Note: This config is replacing the config_wifi_dual_band_support
+         since more bands may now be supported (such as 6GHz), the naming dual_band
+         is no longer indicative, and a separate config now exists for each band -->
+    <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
+
+    <!-- Boolean indicating whether the wifi chipset supports background scanning mechanism.
+         This mechanism allows the host to remain in suspend state and the dongle to actively
+         scan and wake the host when a configured SSID is detected by the dongle. This chipset
+         capability can provide power savings when wifi needs to be always kept on. -->
+    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
+
+    <!-- Wifi driver supports batched scan -->
+    <bool name="config_wifi_batched_scan_supported">true</bool>
+
+    <!-- Boolean indicating whether or not wifi should turn off when emergency call is made -->
+    <bool translatable="false" name="config_wifi_turn_off_during_emergency_call">true</bool>
+
+    <!-- Configure wifi tcp buffersizes in the form:
+         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
+    <string name="config_wifi_tcp_buffers">524288,1048576,4194304,524288,1048576,4194304</string>
+
+    <!-- Wifi driver supports IEEE80211AC for softap -->
+    <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
+
+    <!-- Indicates that connected MAC randomization is supported on this device -->
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+
+    <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
+    <bool name="config_wifi_fast_bss_transition_enabled">true</bool>
+
+    <!-- Boolean indicating associated network selection is allowed -->
+    <bool translatable="false" name="config_wifi_framework_enable_associated_network_selection">false</bool>
+
+    <!-- Indicates that p2p MAC randomization is supported on this device -->
+    <bool name="config_wifi_p2p_mac_randomization_supported">false</bool>
+
+    <!--
+    Controls the mapping between RSSI and RSSI levels.
+
+    RSSI                                    RSSI Level
+    (-infinity, thresholds[0])                       0
+    [threshold[0], threshold[1])                     1
+    [threshold[1], threshold[2])                     2
+    ...                                            ...
+    [threshold[len-2], threshold[len-1])         len-1
+    [threshold[len-1], +infinity)                  len
+
+    where:
+        [a, b) is the range of integers `n` such that a <= n < b
+        `threshold[i]` represents the i'th element of the config_wifiRssiLevelThresholds array
+        and `len` is the length of the config_wifiRssiLevelThresholds array.
+    -->
+    <integer-array name="config_wifiRssiLevelThresholds">
+        <item>-88</item>
+        <item>-82</item>
+        <item>-74</item>
+        <item>-63</item>
+    </integer-array>
+
+    <!-- List of constants that indicate the number of consecutive failures per type needed to block a BSSID.
+    A blocked BSSID will not be considered in network selection and firmware roaming.-->
+    <integer name="config_wifiBssidBlocklistMonitorDhcpFailureThreshold">2</integer>
+    
+    <!-- Integer specifying the percent bonus for current network. The percent is applied to
+         the sum of rssi base score and throughput score-->
+    <integer name="config_wifiFrameworkSecureNetworkBonus">540</integer>
+
+    <!-- Initial PNO scan interval, in milliseconds, when the device is moving (i.e.
+         WifiManager.DEVICE_MOBILITY_STATE_UNKNOWN, WifiManager.DEVICE_MOBILITY_STATE_HIGH_MVMT, or
+         WifiManager.DEVICE_MOBILITY_STATE_LOW_MVMT).
+         The scan interval backs off from this initial interval on subsequent scans.
+         This scan is performed when screen is off and disconnected. -->
+    <integer name="config_wifiMovingPnoScanIntervalMillis">160000</integer>
+
+    <!-- Initial PNO scan interval, in milliseconds, when the device is stationary (i.e.
+         WifiManager.DEVICE_MOBILITY_STATE_STATIONARY).
+         The scan interval backs off from this initial interval on subsequent scans.
+         This scan is performed when screen is off and disconnected. -->
+    <integer name="config_wifiStationaryPnoScanIntervalMillis">160000</integer>
+
+    <!-- Integer thresholds, do not connect to APs with RSSI lower than these values  -->
+    <integer name="config_wifi_framework_wifi_score_entry_rssi_threshold_24GHz">-78</integer>
+    <integer name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-75</integer>
+
+    <!-- Indicates that a full bugreport should be triggered when wifi diagnostics detects an error on non-user (i.e debug) builds -->
+    <bool translatable="false" name="config_wifi_diagnostics_bugreport_enabled">true</bool>
+
+    <!-- Boolean indicating whether framework needs to set the tx power limit for meeting SAR requirements -->
+    <bool translatable="false" name="config_wifi_framework_enable_sar_tx_power_limit">true</bool>
+</resources>
