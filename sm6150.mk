@@ -52,5 +52,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsuspend \
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.3 \
+    android.hardware.drm@1.3.vendor \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6150-common/sm6150-common-vendor.mk)
