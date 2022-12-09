@@ -327,6 +327,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/etc/permissions/com.samsung.permission.SSENSOR.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.samsung.permission.SSENSOR.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(COMMON_PATH)/rootdir/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
 
