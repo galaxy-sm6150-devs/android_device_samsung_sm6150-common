@@ -29,4 +29,6 @@ type spu_file, fs_type;
 allow spu_file labeledfs:filesystem associate;
 
 # SysFS
+type sysfs_input, fs_type, sysfs_type;
 type sysfs_power_writable, fs_type;
+type sysfs_virtual, fs_type, sysfs_type;
