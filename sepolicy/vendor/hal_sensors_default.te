@@ -1,0 +1,2 @@
+allow hal_sensors_default sysfs_power_writable:dir search;
+allow hal_sensors_default sysfs_power_writable:file { read open };

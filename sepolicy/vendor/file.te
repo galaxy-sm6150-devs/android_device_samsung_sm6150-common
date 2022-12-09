@@ -27,3 +27,6 @@ type omr_file, file_type, mlstrustedobject;
 
 type spu_file, fs_type;
 allow spu_file labeledfs:filesystem associate;
+
+# SysFS
+type sysfs_power_writable, fs_type;
