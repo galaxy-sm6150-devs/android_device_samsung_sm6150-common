@@ -29,4 +29,31 @@ ifneq ($(filter a60q a70f a70q a70s a71 m40dd m51 r1q,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
+include $(CLEAR_VARS)
+
+# A/B builds require us to create the mount points at compile time.
+# Just creating it for all cases since it does not hurt.
+BT_FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/bt_firmware
+DSP_MOUNT_POINT := $(TARGET_OUT_VENDOR)/dsp
+FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
+MODEM_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware-modem
+
+$(BT_FIRMWARE_MOUNT_POINT):
+	@echo "Creating $(BT_FIRMWARE_MOUNT_POINT)"
+	@mkdir -p $(TARGET_OUT_VENDOR)/bt_firmware
+
+$(DSP_MOUNT_POINT):
+	@echo "Creating $(DSP_MOUNT_POINT)"
+	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
+
+$(FIRMWARE_MOUNT_POINT):
+	@echo "Creating $(FIRMWARE_MOUNT_POINT)"
+	@mkdir -p $(TARGET_OUT_VENDOR)/firmware_mnt
+
+$(MODEM_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating $(MODEM_MOUNT_POINT)"
+	@mkdir -p $(TARGET_OUT_VENDOR)/firmware-modem
+
+ALL_DEFAULT_INSTALLED_MODULES += $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT) $(FIRMWARE_MOUNT_POINT) $(MODEM_MOUNT_POINT)
+
 endif
