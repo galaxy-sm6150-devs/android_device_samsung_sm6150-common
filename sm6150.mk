@@ -133,7 +133,14 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0 \
+    android.hardware.bluetooth@1.0.vendor \
+    audio.bluetooth.default \
+    com.qualcomm.qti.bluetooth_audio@1.0 \
+    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
+    libbluetooth_audio_session \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
