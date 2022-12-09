@@ -1,2 +1,6 @@
 [
+  {
+    "repository": "android_kernel_samsung_sm6150",
+    "target_path": "kernel/samsung/sm6150"
+  }
 ]
