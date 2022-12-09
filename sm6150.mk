@@ -123,5 +123,15 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+
+# Recovery
+AB_OTA_UPDATER := false
+
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6150-common/sm6150-common-vendor.mk)
