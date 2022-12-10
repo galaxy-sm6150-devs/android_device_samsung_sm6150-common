@@ -1,2 +1,5 @@
+# Bluetooth
+ro.bluetooth.library_name=libbluetooth_qti.so
+
 # DPM
 persist.vendor.dpm.feature=11
