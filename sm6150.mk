@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl \
+    android.hardware.audio@6.0-impl.sm6150 \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.common-util \
     android.hardware.audio.common-util.vendor \
