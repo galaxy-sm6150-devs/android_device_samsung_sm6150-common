@@ -44,7 +44,12 @@
 /dev/qmi[0-9]*                                                                                    u:object_r:radio_device:s0
 /dev/tzic                                                                                         u:object_r:tz_device:s0
 
+# Fingerprint
+/dev/esfp[0-9]                                                                                    u:object_r:fp_sensor_device:s0
+/dev/goodix_fp                                                                                    u:object_r:fp_sensor_device:s0
+
 # HALs
+/(vendor|system/vendor)/bin/hw/android.hardware.biometrics.fingerprint@2.3-service-samsung.sm6150 u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@4\.0-service\.samsung                 u:object_r:hal_keymaster_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service-qti.sm6150                        u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock                 u:object_r:hal_power_stats_default_exec:s0

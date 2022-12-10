@@ -199,6 +199,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.face@1.0.vendor \
     android.hardware.biometrics.fingerprint@2.1 \
     android.hardware.biometrics.fingerprint@2.1.vendor \
+    android.hardware.biometrics.fingerprint@2.3-service-samsung.sm6150 \
 
 # FM
 PRODUCT_PACKAGES += \

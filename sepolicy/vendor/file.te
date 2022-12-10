@@ -5,6 +5,7 @@ type vendor_convergence_data_file, data_file_type, file_type;
 type vendor_gps_file, data_file_type, file_type;
 
 # EFS
+type biometrics_efs_file, file_type;
 type prov_efs_file, file_type;
 
 # Files
@@ -29,6 +30,12 @@ type spu_file, fs_type;
 allow spu_file labeledfs:filesystem associate;
 
 # SysFS
-type sysfs_input, fs_type, sysfs_type;
-type sysfs_power_writable, fs_type;
-type sysfs_virtual, fs_type, sysfs_type;
+type sysfs_fingerprint, sysfs_type, r_fs_type, fs_type;
+type sysfs_input, sysfs_type, r_fs_type, fs_type;
+type sysfs_sec_touchscreen, sysfs_type, r_fs_type, fs_type;
+type sysfs_virtual, sysfs_type, r_fs_type, fs_type;
+
+# SysFS RW
+type sysfs_lcd_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_power_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_touchscreen_writable, sysfs_type, rw_fs_type, fs_type;
