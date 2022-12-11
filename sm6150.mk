@@ -321,6 +321,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service \
     lights.sm6150 \
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm6150 \
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
