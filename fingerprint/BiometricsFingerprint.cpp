@@ -53,22 +53,10 @@ static void set(const std::string& path, const T& value) {
     file << value;
 }
 
-std::string getBootloader() {
-    return android::base::GetProperty("ro.boot.bootloader", "");
-}
-
 BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr) {
     sInstance = this;  // keep track of the most recent instance
     if (!openHal()) {
         LOG(ERROR) << "Can't open HAL module";
-    }
-
-    if (getBootloader().find("A525") != std::string::npos) {
-        set(TSP_CMD_PATH, "set_fod_rect,421,2018,659,2256");
-    } else if (getBootloader().find("A725") != std::string::npos) {
-        set(TSP_CMD_PATH, "set_fod_rect,426,2031,654,2259");
-    } else {
-        LOG(ERROR) << "Device is not an A52 or A72, not setting set_fod_rect";
     }
 
     std::ifstream in("/sys/devices/virtual/fingerprint/fingerprint/position");
