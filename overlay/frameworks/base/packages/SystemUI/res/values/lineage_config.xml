@@ -18,18 +18,9 @@
 -->
 
 <resources>
-    <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">true</bool>
-
-    <!-- Doze: does this device support STATE_DOZE_SUSPEND?  -->
-    <bool name="doze_suspend_display_state_supported">false</bool>
-
-    <!-- Color of the FOD view -->
-    <color name="config_udfpsColor">#00ff00ff</color>
-
-    <!-- Udfps vendor code -->
-    <integer name="config_udfps_vendor_code">455</integer>
-
-    <!-- The radius of the enrollment progress bar, in dp -->
-    <integer name="config_udfpsEnrollProgressBar">100</integer>
+    <!-- HBM type of UDFPS overlay.
+            0 - GLOBAL HBM
+            1 - LOCAL HBM
+    -->
+    <integer name="config_udfpsHbmType">0</integer>
 </resources>
