@@ -303,7 +303,7 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/bin/hw/android.hardware.health@2.1-service-samsung
 vendor/etc/init/android.hardware.health@2.1-service-samsung.rc
 -vendor/etc/vintf/manifest/android.hardware.health@2.1-samsung.xml
-vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so
+vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so|53a2a08c9a9f3eb430c84b17d4dd236147f57288
 vendor/lib64/vendor.samsung.hardware.health@2.0.so
 
 # Display (HDR)
