@@ -1,15 +1,49 @@
 # Data
-type vendor_audiopcm_data_file, data_file_type, file_type;
 type biometrics_vendor_data_file, data_file_type, file_type;
-type vendor_convergence_data_file, data_file_type, file_type;
+type gatekeeper_vendor_data_file, file_type, data_file_type;
+type vendor_audiopcm_data_file, data_file_type, file_type;
+type conn_vendor_data_file, data_file_type, file_type;
 type vendor_gps_file, data_file_type, file_type;
 
 # EFS
-type biometrics_efs_file, file_type;
+type app_efs_file, file_type, mlstrustedobject;
+type battery_efs_file, file_type;
+type bin_nv_data_efs_file, file_type;
+type carrier_efs_file, file_type, mlstrustedobject;
+type cpk_efs_file, file_type;
+type drm_efs_file, file_type;
+type dsms_efs_file, file_type;
+type efs_gsm_file, file_type;
+type gatekeeper_efs_file, file_type;
+type imei_efs_file, file_type, mlstrustedobject;
+type iss_efs_file, file_type;
+type kpm_efs_file, file_type;
+type mb_po_efs_file, file_type;
+type nfc_efs_file, file_type;
+type nv_core_efs_file, file_type;
+type otadm_efs_file, file_type;
+type pdp_efs_file, file_type;
+type pfw_efs_file, file_type, mlstrustedobject;
 type prov_efs_file, file_type;
+type retailmode_efs_file, file_type, mlstrustedobject;
+type sec_efs_file, file_type, mlstrustedobject;
+type sec_poc_file, file_type, mlstrustedobject;
+type snap_efs_file, file_type, mlstrustedobject;
+type snapsec_efs_file, file_type;
+type ssm_efs_file, file_type;
+type tee_efs_file, file_type;
+type vaultkeeper_efs_file, file_type;
+type wifi_efs_file, file_type, mlstrustedobject;
 
 # Files
-type sec_poc_file, file_type;
+type cache_pdp_file, file_type;
+
+# Procs
+type proc_default_smp_affinity, fs_type, proc_type;
+type proc_last_kmsg, fs_type, proc_type;
+type proc_reset_reason, fs_type, proc_type;
+type proc_simslot_count, fs_type, proc_type;
+type proc_swappiness, fs_type, proc_type;
 
 # Rootfs
 type carrier_file, fs_type;
@@ -30,13 +64,26 @@ type spu_file, fs_type;
 allow spu_file labeledfs:filesystem associate;
 
 # SysFS
+type sysfs_battery, sysfs_type, r_fs_type, fs_type;
+type sysfs_camera, sysfs_type, r_fs_type, fs_type;
 type sysfs_fingerprint, sysfs_type, r_fs_type, fs_type;
+type sysfs_fpc, sysfs_type, r_fs_type, fs_type;
+type sysfs_iio, sysfs_type, r_fs_type, fs_type;
 type sysfs_input, sysfs_type, r_fs_type, fs_type;
+type sysfs_sec_key, sysfs_type, r_fs_type, fs_type;
+type sysfs_sec_switch, sysfs_type, r_fs_type, fs_type;
 type sysfs_sec_touchscreen, sysfs_type, r_fs_type, fs_type;
-type sysfs_virtual, sysfs_type, r_fs_type, fs_type;
+type sysfs_sensors, sysfs_type, r_fs_type, fs_type;
+type sysfs_wifi, sysfs_type, r_fs_type, fs_type;
 
 # SysFS RW
+type sysfs_audio_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_battery_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_camera_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_lcd_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_mdnie_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_power_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_sec_switch_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_ss_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_touchscreen_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_wifi_writable, sysfs_type, rw_fs_type, fs_type;
