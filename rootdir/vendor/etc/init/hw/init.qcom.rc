@@ -463,6 +463,9 @@ on post-fs-data
     # Prevents permission denied error for telephony
     chmod 0644 /proc/cmdline
 
+    # Prevents permission denied error for gatekeeper to avoid wrong pin & locked storage issues
+    mkdir /data/vendor/gatekeeper 0770 system system
+
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
