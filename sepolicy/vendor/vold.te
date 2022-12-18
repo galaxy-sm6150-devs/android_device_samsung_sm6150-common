@@ -1,4 +1,0 @@
-allow vold efs_file:dir { open read ioctl };
-
-# For setting read_ahead_kb
-allow vold vendor_sysfs_mmc_host:file w_file_perms;
