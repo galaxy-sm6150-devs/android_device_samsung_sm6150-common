@@ -70,13 +70,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.qti.qcv.rc",
-    src: "vendor/etc/init/init.qti.qcv.rc",
-    sub_dir: "init/",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.vendor.onebinary.rc",
     src: "vendor/etc/init/init.vendor.onebinary.rc",
     sub_dir: "init/",
@@ -216,23 +209,5 @@ sh_binary {
 sh_binary {
     name: "init.qti.chg_policy.sh",
     src: "vendor/bin/init.qti.chg_policy.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.dcvs.sh",
-    src: "vendor/bin/init.qti.dcvs.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.qcv.sh",
-    src: "vendor/bin/init.qti.qcv.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "qca6234-service.sh",
-    src: "vendor/bin/qca6234-service.sh",
     vendor: true,
 }

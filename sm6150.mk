@@ -64,10 +64,6 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     libtinyalsa \
     libtinycompress \
-    tinycap \
-    tinymix \
-    tinypcminfo \
-    tinyplay \
 
 # Audio SoundFX
 PRODUCT_PACKAGES += \
@@ -97,28 +93,23 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/vendor/etc/audio_platform_info_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_qrd.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/audio_policy_configuration_base.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_base.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt \
-    $(COMMON_PATH)/rootdir/vendor/etc/dax3_media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dax3_media_codecs_dolby_audio.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/graphite_ipc_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/graphite_ipc_platform_info.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/mixer_paths_idp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_idp.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/mixer_paths_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/mixer_paths_wcd9375.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9375.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/mixer_paths_wcd9375qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9375qrd.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/mixer_usb_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_default.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/mixer_usb_gray.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_gray.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/playback_record_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/playback_record_audio_policy_configuration.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/sound_trigger_mixer_paths_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_qrd.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/sound_trigger_mixer_paths_wcd9340.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9340.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hearing_aid_audio_policy_configuration.xml \
@@ -127,7 +118,6 @@ PRODUCT_COPY_FILES += \
 
 # Automotive/Gearhead
 PRODUCT_PACKAGES += \
-    android.hardware.automotive.vehicle@2.0 \
     android.hardware.automotive.vehicle@2.0.vendor \
     android.hardware.automotive.vehicle@2.0-manager-lib \
 
@@ -150,16 +140,12 @@ PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.device@2.0.vendor \
     android.frameworks.cameraservice.service@2.1.vendor \
     android.hardware.camera.provider@2.5-impl \
-    android.hardware.camera.provider@2.7 \
     android.hardware.camera.provider@2.7.vendor \
-    android.hardware.camera.device@3.7 \
     android.hardware.camera.device@3.7.vendor \
     libcamera2ndk_vendor \
-    libdng_sdk \
     libdng_sdk.vendor \
     libgui_vendor:32 \
     libgrallocusage.vendor \
-    libstdc++ \
     libstdc++.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
@@ -195,9 +181,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.face@1.0 \
     android.hardware.biometrics.face@1.0.vendor \
-    android.hardware.biometrics.fingerprint@2.1 \
     android.hardware.biometrics.fingerprint@2.1.vendor \
     android.hardware.biometrics.fingerprint@2.3-service-samsung.sm6150 \
 
@@ -219,10 +203,6 @@ PRODUCT_PACKAGES += \
 
 # GNSS/GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0 \
-    android.hardware.gnss@1.1 \
-    android.hardware.gnss@2.0 \
-    android.hardware.gnss@2.1 \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
     android.hardware.gnss@2.1.vendor \
@@ -235,44 +215,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     gralloc.sm6150 \
     hwcomposer.sm6150 \
-    libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
-    libqdMetaData \
     libqdMetaData.vendor \
     libsdmcore \
     libsdmutils \
     libtinyxml \
     libion \
     libvulkan \
-    vendor.display.color@1.0 \
-    vendor.display.color@1.1 \
-    vendor.display.color@1.2 \
-    vendor.display.color@1.3 \
-    vendor.display.config@1.0 \
-    vendor.display.config@1.1 \
-    vendor.display.config@1.2 \
-    vendor.display.config@1.3 \
-    vendor.display.config@1.4 \
-    vendor.display.config@1.5 \
-    vendor.display.config@2.0 \
-    vendor.display.postproc@1.0 \
-    vendor.display.color@1.0.vendor \
-    vendor.display.color@1.1.vendor \
-    vendor.display.color@1.2.vendor \
-    vendor.display.color@1.3.vendor \
-    vendor.display.color@1.4.vendor \
     vendor.display.color@1.5.vendor \
-    vendor.display.config@1.0.vendor \
-    vendor.display.config@1.1.vendor \
-    vendor.display.config@1.2.vendor \
-    vendor.display.config@1.3.vendor \
-    vendor.display.config@1.4.vendor \
-    vendor.display.config@1.5.vendor \
-    vendor.display.config@1.6.vendor \
-    vendor.display.config@1.7.vendor \
-    vendor.display.config@1.8.vendor \
-    vendor.display.config@1.9.vendor \
-    vendor.display.config@1.10.vendor \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0.vendor \
     vendor.display.postproc@1.0.vendor \
@@ -327,34 +277,17 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libavservices_minijail \
     libavservices_minijail.vendor \
     libavservices_minijail_vendor \
-    libcodec2_hidl@1.0 \
     libcodec2_hidl@1.0.vendor \
-    libcodec2_hidl@1.1 \
     libcodec2_hidl@1.1.vendor \
-    libcodec2_vndk \
     libcodec2_vndk.vendor \
     libsfplugin_ccodec \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_ac4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ac4.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_c2_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_sec.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_c2_sec_ape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_sec_ape.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_c2_sec_qcp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_sec_qcp.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_c2_sec_wmx.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_sec_wmx.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_ddp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ddp.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_performance_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_v1.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_performance_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_v2.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_sec_ape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_sec_ape.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_sec_primary.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_sec_primary.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_sec_qcp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_sec_qcp.xml \
-    $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_sec_video_primary.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_sec_video_primary.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_v1.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_v2.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml \
@@ -382,8 +315,6 @@ PRODUCT_PACKAGES += \
 
 # Net
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.0 \
-    android.system.net.netd@1.1 \
     netutils-wrapper-1.0 \
 
 # Neural Networks
@@ -392,8 +323,6 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0:64 \
-    android.hardware.nfc@1.1:64 \
     android.hardware.nfc@1.2:64 \
     com.android.nfc_extras \
     libchrome \
@@ -408,13 +337,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/vendor/etc/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/libnfc-nxp_RF.conf \
-    $(COMMON_PATH)/rootdir/vendor/etc/libnfc-mtp-SN100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-mtp-SN100.conf \
-    $(COMMON_PATH)/rootdir/vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-mtp-SN100_38_4MHZ.conf \
     $(COMMON_PATH)/rootdir/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(COMMON_PATH)/rootdir/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     $(COMMON_PATH)/rootdir/vendor/etc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf \
-    $(COMMON_PATH)/rootdir/vendor/etc/libnfc-qrd-SN100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-qrd-SN100.conf \
-    $(COMMON_PATH)/rootdir/vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-qrd-SN100_38_4MHZ.conf \
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -495,7 +420,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti.sm6150 \
     android.hardware.power.stats@1.0-service.mock \
-    android.hardware.power@1.3 \
     android.hardware.power@1.3.vendor \
 
 PRODUCT_COPY_FILES += \
@@ -543,7 +467,6 @@ PRODUCT_PACKAGES += \
     init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.qti.qcv.rc \
     init.qti.ufs.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
@@ -572,16 +495,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.sh \
     init.qti.chg_policy.sh \
-    init.qti.dcvs.sh \
-    init.qti.qcv.sh \
-    qca6234-service.sh \
-
-# RCS
-PRODUCT_PACKAGES += \
-    rcs_service_aidl \
-    rcs_service_aidl.xml \
-    rcs_service_api \
-    rcs_service_api.xml \
 
 # Recovery
 AB_OTA_UPDATER := false
@@ -589,19 +502,12 @@ AB_OTA_UPDATER := false
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
 
-# RenderScript
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl \
-
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5 \
     android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0 \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.0.vendor \
     librilutils \
     libxml2 \
     secril_config_svc \
@@ -624,7 +530,6 @@ PRODUCT_PACKAGES += \
     sensors.samsung \
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/etc/permissions/com.samsung.permission.SSENSOR.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.samsung.permission.SSENSOR.xml \
     $(COMMON_PATH)/rootdir/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(COMMON_PATH)/rootdir/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
 
@@ -634,8 +539,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
@@ -665,7 +568,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service-qti \
     android.hardware.usb.gadget@1.0-service-qti \
-    android.hardware.usb@1.0.vendor \
     android.hardware.usb@1.1.vendor \
 
 # Vendor Service Manager
