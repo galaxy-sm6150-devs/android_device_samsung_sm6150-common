@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from a70qxx-user 11 RP1A.200720.012 A705FNXXU5DVG3 release-keys
+# All unpinned blobs below are extracted from a70qxx-user 11 RP1A.200720.012 A705FNXXS5DVK6 release-keys
 
 # ADSP
 vendor/bin/adsprpcd
