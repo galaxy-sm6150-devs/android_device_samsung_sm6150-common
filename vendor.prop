@@ -85,9 +85,6 @@ ro.charger.enable_suspend=true
 # Chipset
 ro.soc.manufacturer=Qualcomm
 
-# Crypto
-ro.crypto.volume.filenames_mode=aes-256-xts
-
 # Dalvik
 dalvik.vm.heapminfree=2m
 dalvik.vm.lockprof.threshold=500
