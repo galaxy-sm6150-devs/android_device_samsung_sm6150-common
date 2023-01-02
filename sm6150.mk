@@ -531,6 +531,7 @@ PRODUCT_COPY_FILES += \
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
+    hardware/samsung \
 
 # Telephony
 PRODUCT_PACKAGES += \
