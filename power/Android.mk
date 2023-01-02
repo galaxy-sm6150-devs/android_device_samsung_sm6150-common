@@ -12,7 +12,7 @@ LOCAL_SHARED_LIBRARIES := \
     libdl \
     libbase \
     libutils \
-    android.hardware.power-V1-ndk_platform \
+    android.hardware.power-V1-ndk \
     libbinder_ndk
 
 LOCAL_HEADER_LIBRARIES := \
@@ -28,6 +28,10 @@ LOCAL_SRC_FILES := \
     main.cpp
 
 LOCAL_CFLAGS += -Wall -Wextra -Werror
+
+ifneq ($(BOARD_POWER_CUSTOM_BOARD_LIB),)
+    LOCAL_WHOLE_STATIC_LIBRARIES += $(BOARD_POWER_CUSTOM_BOARD_LIB)
+else
 
 ifeq ($(call is-board-platform-in-list,sm6150), true)
 LOCAL_SRC_FILES += power-sm6150.c
@@ -61,3 +65,4 @@ LOCAL_VENDOR_MODULE := true
 LOCAL_VINTF_FRAGMENTS := android.hardware.power-service-qti.sm6150.xml
 
 include $(BUILD_EXECUTABLE)
+endif
