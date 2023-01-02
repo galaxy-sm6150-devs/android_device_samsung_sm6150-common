@@ -201,3 +201,6 @@ ro.vendor.use_data_netmgrd=false
 telephony.lteOnCdmaDevice=1
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
+
+# Zygote
+zygote.critical_window.minute=10
